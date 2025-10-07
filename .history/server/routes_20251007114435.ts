@@ -15,7 +15,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!password || typeof password !== 'string') {
         return res.status(400).json({ message: "Password is required" });
       }
-      
 
       // Perform server-side analysis
       const analysis = analyzePasswordStrength(password);
